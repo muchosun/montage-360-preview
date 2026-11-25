@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Монтаж 360° для аттракционов и площадок</title>
+<meta name="description" content="Монтаж гостевых роликов из видео 360° для картинга, аттракционов и спортивных площадок. От тестового исходника до страницы, где гость смотрит и скачивает видео.">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#121310;color:#f2f3e9;font:16px/1.55 system-ui,sans-serif}a{color:inherit}header,main,footer{width:min(1200px,calc(100% - 48px));margin:auto}header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid #393b32;gap:16px}nav{display:flex;gap:24px}nav a{text-decoration:none}.brand{font-weight:850}.brand b,.eyebrow{color:#dcfa69}.hero{min-height:540px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:28px;padding:56px 0}.eyebrow{font:600 12px/1.5 monospace;letter-spacing:.12em;text-transform:uppercase}h1,h2,h3,p{margin:0}h1{font-size:clamp(3rem,7.1vw,7.5rem);line-height:.88;letter-spacing:-.08em;margin:20px 0 26px}h2{font-size:clamp(2rem,4vw,3.7rem);letter-spacing:-.055em;line-height:1.03;margin:8px 0 26px}p{color:#c1c4b6;max-width:60ch}.cta,button{display:inline-block;margin-top:24px;padding:12px 20px;background:#dcfa69;color:#151710;border:0;border-radius:4px;font:700 1rem system-ui;text-decoration:none;cursor:pointer}.visual{aspect-ratio:1.15;position:relative;overflow:hidden;display:grid;place-items:center;border:1px solid #515741;background:radial-gradient(ellipse at center,#353e1e,#1a1d14 65%);border-radius:8px}.visual canvas{width:100%;height:100%;position:absolute;inset:0}.visual span{position:absolute;bottom:12px;left:16px;color:#dcfa69;font:12px monospace}.visual strong{z-index:1;font-size:clamp(3rem,10vw,9rem);line-height:1;letter-spacing:-.1em;color:#edffaf;pointer-events:none;text-shadow:0 2px 40px #192410}section.panel{border-top:1px solid #393b32;padding:56px 0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.cards.paths{grid-template-columns:repeat(2,1fr)}.cards article{padding:25px;background:#1e2119;border:1px solid #373b2b;border-radius:6px}.cards h3{margin:0 0 7px}ol{padding-left:24px;color:#c1c4b6}li+li{margin-top:10px}.brief{display:grid;grid-template-columns:1fr 1fr;gap:32px}label{display:block;margin:10px 0}input,select,textarea{display:block;width:100%;margin-top:5px;padding:11px;background:#20231a;color:#f2f3e9;border:1px solid #525648;border-radius:4px;font:inherit}footer{padding:24px 0;border-top:1px solid #393b32;color:#c1c4b6}#status{margin-top:12px}:focus-visible{outline:2px solid #dcfa69;outline-offset:4px}@media(max-width:740px){.hero,.brief{grid-template-columns:1fr}.cards,.cards.paths{grid-template-columns:1fr}.hero{min-height:auto;padding:40px 0}nav a:first-child{display:none}}
+.gear-controls{display:flex;justify-content:flex-end;gap:8px}.gear-controls button{margin-top:12px;padding:7px 14px}.gear{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(220px,33%,330px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 0 14px;scrollbar-color:#92985d #20231a}.gear article{display:flex;flex-direction:column;scroll-snap-align:start;padding:22px;background:#1e2119;border:1px solid #373b2b;border-radius:6px}.gear h3{margin:6px 0}.gear a{margin-top:auto;padding-top:12px;color:#dcfa69}.gear-kits{margin-top:20px}.hero h1{font-size:clamp(2.8rem,6.4vw,6.6rem)}.delivery-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}.message-demo{padding:clamp(18px,4vw,42px);border:1px solid #525b37;border-radius:10px;background:radial-gradient(ellipse at top right,#394428,#23271c 68%)}.message-box{margin-top:12px;padding:20px;background:#141710;border:1px solid #444c34;border-radius:12px 12px 12px 3px}.message-box p{margin:8px 0 12px}.demo-link{color:#dcfa69}.terms{margin-top:18px;border-left:3px solid #dcfa69;padding:14px 18px;background:#20241a}.terms h3{margin-bottom:4px}details{border-bottom:1px solid #393b32;padding:14px 0}details p{margin:10px 0 0}summary{cursor:pointer;font-weight:700}nav{flex-wrap:wrap;justify-content:flex-end}header .brand{white-space:nowrap}@media(max-width:740px){.delivery-layout{grid-template-columns:1fr}nav{column-gap:12px;font-size:.9rem}}.demo-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(20px,5vw,64px);align-items:center}.demo-note{margin-top:14px;font-size:.93rem}.demo-media{min-width:0;position:relative;aspect-ratio:16/9;border:1px solid #4b5433;border-radius:10px;background:#10120d;display:grid;place-items:center;overflow:hidden}.demo-empty{padding:20px;text-align:center;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,#303920,#171b12 72%)}.demo-empty strong{font-size:clamp(1.2rem,3vw,1.8rem);letter-spacing:-.025em}.demo-empty p{margin-top:4px}.demo-picker{display:inline-block;margin:12px 0 0;color:#dcfa69;cursor:pointer;text-decoration:underline;text-underline-offset:4px}.demo-empty:focus-within .demo-picker{outline:2px solid #dcfa69;outline-offset:4px}#demo-file{position:absolute;width:1px;height:1px;padding:0;margin:0;clip-path:inset(50%);overflow:hidden}.demo-media video{display:block;width:100%;height:100%;max-height:65vh;object-fit:contain}.demo-status:not(:empty){position:absolute;bottom:4px;left:8px;right:8px;font-size:.8rem;text-align:center;color:#f2f3e9}.demo-media [hidden]{display:none}.demo-link:hover{color:#fff}.hero-links{display:flex;align-items:center;gap:12px 20px;flex-wrap:wrap;margin-top:24px}.hero-links .cta{margin:0}.hero-links .secondary{color:#dcfa69;text-underline-offset:4px}@media(max-width:740px){.demo-layout{grid-template-columns:1fr}.demo-media{min-height:185px}}.gear-photo{display:grid;place-items:center;height:158px;padding:10px;border-radius:5px;background:#f8f8f5;overflow:hidden;color:#20231a}.gear article .gear-photo{margin-bottom:14px}.gear-photo img{display:block;width:100%;height:138px;object-fit:contain}.gear-photo-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.gear-photo-pair figure{width:100%;min-width:0;margin:0;text-align:center}.gear-photo-pair img{height:112px}.gear-photo-pair figcaption{font-size:.75rem;font-weight:700}.accessory-title{margin-top:24px;margin-bottom:10px}.accessories figure{min-width:0;margin:0;padding:12px;background:#1e2119;border:1px solid #373b2b;border-radius:6px}.accessories figcaption{padding:8px 2px 2px}.accessories figcaption span{display:block;color:#c1c4b6;font-size:.92rem}.path-link{display:inline-block;margin-top:12px;color:#dcfa69;min-height:44px;padding:9px 0;text-underline-offset:4px}.mobile-action{display:none}.brief input,.brief select{min-height:44px}.brief select{max-width:100%}.guest-preview{display:inline-block;margin-top:12px;color:#dcfa69;text-underline-offset:4px}@media(max-width:740px){header,main,footer{width:calc(100% - 32px)}header{flex-wrap:wrap;padding:10px 0}header nav{gap:4px 14px}header nav a,header nav a:first-child{display:inline-flex;align-items:center;min-height:44px}.gear{grid-auto-columns:min(83%,310px);overscroll-behavior-x:contain;scrollbar-width:thin}.gear-controls button{min-width:44px;min-height:44px}body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}.mobile-action{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:3;justify-content:center;padding:8px 16px calc(8px + env(safe-area-inset-bottom));background:#171a12;border-top:1px solid #454b35}.mobile-action .cta{margin:0;text-align:center;width:min(100%,420px);min-height:44px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}/* Layout and typography */
+body{font-family:"Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.62}
+header,main,footer{width:min(1140px,calc(100% - 64px))}
+header{min-height:76px;padding:12px 0}
+header .brand{font-size:1.08rem;letter-spacing:-.035em}
+nav{align-items:center;gap:8px}
+nav a{display:inline-flex;align-items:center;min-height:44px;padding:7px 12px;border-radius:6px;font-size:.93rem;color:#c1c4b6}
+nav a:hover{background:#1e2119;color:#f2f3e9}
+.hero{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(26px,6vw,76px);min-height:0;padding:clamp(56px,8vw,104px) 0}
+.hero h1{font-size:clamp(3rem,7vw,6.1rem);letter-spacing:-.07em;line-height:.94;margin:16px 0 22px}
+.hero h1+p{max-width:47ch;font-size:clamp(1rem,1.6vw,1.16rem)}
+.hero-links .secondary{display:inline-flex;align-items:center;min-height:44px}
+.hero-paths{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.hero-paths a{display:inline-flex;align-items:center;min-height:44px;padding:7px 12px;border:1px solid #525648;border-radius:6px;text-decoration:none;color:#f2f3e9;font-size:.9rem}
+.hero-paths a:hover{border-color:#dcfa69;color:#dcfa69}
+.visual{border-radius:14px;aspect-ratio:1.13}
+.eyebrow{font-size:.78rem;letter-spacing:.075em}
+h2{font-size:clamp(2rem,4.2vw,3.35rem);line-height:1.08;letter-spacing:-.055em;margin:8px 0 24px;text-wrap:balance}
+h3{font-size:1.2rem;line-height:1.25;letter-spacing:-.025em}
+section.panel{padding:clamp(38px,6.4vw,76px) 0;scroll-margin-top:16px}
+.cards{gap:16px}
+.cards article,.accessories figure{padding:clamp(16px,2.4vw,26px);border-radius:10px}
+.cards p,.gear article p:not(.eyebrow){font-size:.95rem;line-height:1.6}
+.gear article{min-width:0;padding:16px;border-radius:10px}
+.gear-controls button{min-width:44px;min-height:44px}
+.gear-photo{border-radius:7px}
+.cta,button{border-radius:7px;line-height:1.3}
+.cta:hover,button:hover{background:#edffaf}
+#demo .demo-layout,#guest-order .delivery-layout{gap:clamp(24px,6vw,72px)}
+.delivery-layout ol{margin-bottom:0}
+.message-box p{max-width:38ch}
+#faq details{padding:0}
+#faq summary{padding:14px 0;min-height:48px}
+#faq details p{margin:0 0 16px}
+.brief{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(26px,6vw,70px)}
+.brief form{min-width:0;padding:clamp(16px,3.5vw,32px);background:#1e2119;border:1px solid #373b2b;border-radius:12px}
+.brief form label{font-size:.93rem;font-weight:650;margin:0 0 14px}
+.brief form input,.brief form select{min-width:0;margin-top:6px;font-size:1rem;font-weight:400}
+.brief form button{margin-top:4px;min-height:44px}
+#status:empty{margin:0}
+@media(max-width:740px){
+ header,main,footer{width:calc(100% - 32px)}
+ header{min-height:0;gap:2px 10px}
+ nav a{padding-inline:6px}
+ .hero,.brief{grid-template-columns:minmax(0,1fr)}
+ .hero{padding:38px 0;gap:22px}
+ .visual{aspect-ratio:1.7}
+ .hero h1{font-size:clamp(2.8rem,11vw,4.8rem)}
+ .hero-links{gap:4px 16px}
+ .cards{gap:10px}
+ .brief form button{width:100%}
+}
+@media(max-width:365px){header nav{column-gap:2px}.hero-links .cta{width:100%;text-align:center}}
+[hidden]{display:none!important}
+.demo-actions{margin:10px 0;display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px}
+.demo-actions .demo-picker{margin:0;cursor:pointer}
+.demo-actions input[type=file]{position:absolute;width:1px;height:1px;opacity:0}
+.demo-actions input[type=file]:focus-visible + label{outline:2px solid #dcfa69;outline-offset:4px}
+.demo-note{font-size:.95rem}
+.demo-media{display:block;aspect-ratio:auto;border:1px solid #4b5433;border-radius:10px;overflow:hidden}.demo-media p,.demo-media .demo-actions{padding-inline:12px}.demo-media .demo-status:not(:empty){position:static;padding-bottom:10px}.demo-media video{height:auto;max-height:none}.demo-preview-label{font-size:.9rem;color:#e1e8cb;line-height:1.45}
+.form-actions{display:flex;flex-wrap:wrap;gap:8px}
+.form-actions button{margin-top:0}
+.form-actions .secondary-action{background:transparent;color:#edf4dc;border:1px solid #657053}
+.form-actions .secondary-action:hover{color:#dcfa69;border-color:#dcfa69}
+.brief .form-note,.form-help{font-size:.91rem;color:#c4cab6}
+.form-help{display:block;margin-top:4px;font-weight:400}
+.manual-copy textarea{display:block;width:100%;min-height:126px;border:1px solid #657053;border-radius:6px;padding:8px;background:#121310;color:#f2f3e9;font:inherit}
+.manual-copy{margin-top:14px}
+#status{margin:8px 0 0}
+.demo-media video{width:100%;aspect-ratio:16/9;object-fit:contain;background:#1e2119}
+.skip-link{position:absolute;left:16px;top:8px;transform:translateY(-155%);z-index:10;background:#dcfa69;color:#121310;padding:8px 15px;border-radius:6px;font-weight:800}
+.skip-link:focus{transform:none}
+@media(max-width:740px){.demo-layout,.delivery-layout,.cards,.cards.paths{grid-template-columns:minmax(0,1fr)}.gear{min-width:0}.panel>*{min-width:0}}
+@media(max-width:365px){header nav{flex-wrap:wrap;max-width:100%;row-gap:0}.demo-actions .demo-picker{min-height:44px;display:inline-flex;align-items:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style></head><body><a class="skip-link" href="#main">К содержанию</a><header><div class="brand">Монтаж <b>360°</b></div><nav aria-label="Навигация"><a href="#formats">Сотрудничество</a><a href="#equipment">Оборудование</a><a href="#demo">Демо</a></nav></header><main id="main">
+<section class="hero"><div><p class="eyebrow">Видео 360° для бизнеса</p><h1>Видео 360°<br>для гостей</h1><p>Запустим видео с аттракционов, заездов и прыжков для ваших гостей. Подберём оборудование или подключимся к вашей съёмке. Смонтируем ролики и отправим ссылки от имени площадки. Оплата за готовый ролик по договору.</p><div class="hero-links"><a class="cta" href="#brief">Подготовить бриф на пилот ↘</a><a class="secondary" href="#demo">Пример гостевого видео</a></div><div class="hero-paths"><a href="#brief" data-scenario="existing">Камеры уже есть</a><a href="#brief" data-scenario="launch">Нужно запустить съёмку</a></div></div><div class="visual" aria-hidden="true"><canvas id="sphere"></canvas><strong>360°</strong><span>СФЕРИЧЕСКИЙ ОБЗОР</span></div></section>
+<section id="formats" class="panel"><p class="eyebrow">Сотрудничество</p><h2>Подключимся на вашем этапе</h2><div class="cards paths"><article><h3>Оборудование уже есть</h3><p>Смотрим тестовый материал и согласуем, как получать исходники. Получаем от площадки исходники, монтируем ролики и отправляем их гостям от вашего имени.</p><a class="path-link" href="#brief" data-scenario="existing">Обсудить монтаж ↘</a></article><article><h3>Съёмку нужно запустить</h3><p>Подбираем камеры и крепления, согласуем смету. После оплаты заказа закупаем оборудование и передаём его площадке. Помогаем с установкой. Проверяем процесс на тестовой съёмке, от записи до выдачи ролика гостю.</p><a class="path-link" href="#brief" data-scenario="launch">Обсудить запуск ↘</a></article></div></section>
+<section class="panel" id="demo" aria-labelledby="demo-title">
+ <div class="demo-layout">
+  <div>
+   <p class="eyebrow">Гостевой ролик</p>
+   <h2 id="demo-title">Что получит гость</h2>
+   <p>Гость открывает ссылку от площадки, смотрит ролик и может его сохранить. Ниже можно проверить, как это выглядит на телефоне.</p>
+   <a class="guest-preview" href="guest.html">Открыть пример страницы гостя ↗</a><p class="demo-note">Это демонстрация выдачи обычного видео с выбранным ракурсом. Сферический просмотр, если нужен, согласуем отдельно.</p>
+  </div>
+  <div class="demo-media">
+   <video id="demo-video" src="demo.mp4" poster="demo-poster.png" controls playsinline preload="metadata" aria-label="Тестовый ролик для проверки плеера"></video>
+   <div class="demo-empty" id="demo-empty" hidden><strong>Ролик не открылся</strong><p>Попробуйте ещё раз или выберите свой MP4/WebM.</p></div>
+   <p class="demo-preview-label">Демо интерфейса · 8 секунд · иллюстрация, не реальная съёмка</p>
+   <div class="demo-actions"><input id="demo-file" type="file" accept="video/mp4,video/webm"><label class="demo-picker" for="demo-file">Проверить свой файл</label><button class="secondary-action" type="button" id="reset-demo" hidden>Вернуть демо</button></div>
+   <p class="demo-note">Свой файл открывается только на этом устройстве и никуда не загружается.</p>
+   <p id="demo-status" class="demo-status" aria-live="polite"></p>
+  </div>
+ </div>
+</section><section class="panel" id="guest-order"><div class="delivery-layout"><div><p class="eyebrow">На стороне гостя</p><h2>От покупки видео до ссылки в чате</h2><ol><li>Гость покупает видео у площадки вместе с заездом или другой активностью. Сотрудник оформляет заказ в форме.</li><li>Площадка загружает запись в рабочее облако. Номер заказа связывает исходник с выбранным получателем.</li><li>Мы монтируем, загружаем готовый ролик и отправляем ссылку в выбранный мессенджер от имени площадки.</li></ol></div><div class="message-demo"><p class="eyebrow">Пример сообщения</p><div class="message-box"><strong>Команда площадки</strong><p>Анна, ваше видео с заезда готово! По ссылке можно посмотреть и скачать ролик.</p><a class="demo-link" href="guest.html">Посмотреть как гость ↗</a></div></div></div></section>
+<section class="panel" id="pilot"><p class="eyebrow">Первый запуск</p><h2>Проверим процесс на одной площадке</h2><div class="cards"><article><h3>Тестовый исходник</h3><p>Берём тестовую запись с вашей камеры или подбираем оборудование для пилота.</p></article><article><h3>Гостевой ролик</h3><p>Согласуем длительность, оформление и формат. Проверяем, как ролик открывается на телефоне.</p></article><article><h3>Проверка выдачи</h3><p>Проверяем связку «заказ → запись → ссылка» на тестовом заказе и согласуем рабочий регламент.</p></article></div><div class="terms"><h3>Оплата за готовый ролик</h3><p>Стоимость за ролик согласуем после оценки исходников, оформления и объёма заказов. Закупку и установку оборудования рассчитываем по отдельной смете. Условия работы и сроки закрепляем в договоре.</p></div><a class="cta" href="#brief">Подготовить бриф на пилот ↘</a></section><section class="panel" id="equipment"><p class="eyebrow">Камеры и комплектация</p><h2>Оборудование для съёмки 360°</h2><p>Если камера уже есть, начнём с тестового исходника. Для новой точки подберём комплект под условия площадки. Иллюстрации условные; характеристики уточняйте по ссылкам производителя.</p><div class="gear-controls"><button type="button" data-scroll="-1" aria-label="Предыдущие камеры" aria-controls="gear-list">←</button><button type="button" data-scroll="1" aria-label="Следующие камеры" aria-controls="gear-list">→</button></div><div class="gear" id="gear-list" tabindex="0" aria-label="Модели камер 360°"><article><div class="gear-photo"><img src="assets/camera-slim.svg" alt="" loading="lazy" decoding="async"></div><p class="eyebrow">Для тестовых съёмок</p><h3>Insta360 X4 Air</h3><p>Кандидат для пилота. Сравним с X5 и X6 на реальном заезде.</p><a href="https://www.insta360.com/product/compare">Характеристики ↗</a></article>
+<article><div class="gear-photo"><img src="assets/camera-pair.svg" alt="" loading="lazy" decoding="async"></div><p class="eyebrow">Камера 360°</p><h3>Insta360 X5 / X6</h3><p>Варианты для регулярной съёмки. Проверим детализацию и качество при освещении площадки.</p><a href="https://www.insta360.com/product/compare">Характеристики ↗</a></article>
+<article><div class="gear-photo"><img src="assets/camera-wide.svg" alt="" loading="lazy" decoding="async"></div><p class="eyebrow">Камера 360°</p><h3>GoPro MAX2</h3><p>Сменные линзы. Подойдёт для проверки быстрого движения и совместимости с имеющимися креплениями.</p><a href="https://gopro.com/en/tw/shop/cameras/learn/max2/CHDHZ-311-master.html?tab=tech-specs">Характеристики ↗</a></article>
+<article><div class="gear-photo"><img src="assets/camera-square.svg" alt="" loading="lazy" decoding="async"></div><p class="eyebrow">Камера 360°</p><h3>DJI Osmo 360</h3><p>Кандидат для динамичных сцен. Есть встроенная память и поддержка microSD.</p><a href="https://www.dji.com/360/specs">Характеристики ↗</a></article>
+<article><div class="gear-photo"><img src="assets/camera-square.svg" alt="" loading="lazy" decoding="async"></div><p class="eyebrow">Камера 360°</p><h3>Kandao QooCam 3 Ultra</h3><p>Кандидат для проектов с цветокоррекцией. Проверим время передачи и обработки файлов.</p><a href="https://www.kandaovr.com/qoocam-3-ultra/tech-spec">Характеристики ↗</a></article>
+<article><div class="gear-photo"><img src="assets/camera-tall.svg" alt="" loading="lazy" decoding="async"></div><p class="eyebrow">Камера 360°</p><h3>Ricoh THETA X</h3><p>Вариант для обзорных сцен и съёмки помещений. Перед закупкой проверим длительность записи.</p><a href="https://support.ricoh360.com/manual/x-add-info-01">Характеристики ↗</a></article></div><div class="cards paths gear-kits"><article><h3>Комплект для пилота</h3><p>Одна 360°-камера, согласованное крепление, защита оптики, совместимая карта памяти, запасной аккумулятор и кабель для передачи файлов.</p></article><article><h3>Комплект для регулярных заездов</h3><p>К пилотному комплекту добавим резервную камеру, зарядную станцию или зарядный кейс, запасные карты и оптику, если модель допускает замену. Подберём хранилище для передачи записей.</p></article></div><h3 class="accessory-title">Крепления, питание и память</h3>
+<div class="cards accessories">
+ <figure><div class="gear-photo"><img src="assets/camera-kit.svg" alt="" loading="lazy" decoding="async"></div><figcaption><strong>Крепления и зарядка</strong><span>Пример комплекта Insta360 X5 с принадлежностями для установки и зарядки.</span></figcaption></figure>
+ <figure><div class="gear-photo"><img src="assets/camera-guards.svg" alt="" loading="lazy" decoding="async"></div><figcaption><strong>Защита оптики</strong><span>Накладки подбираем под конкретную модель камеры.</span></figcaption></figure>
+ <figure><div class="gear-photo"><img src="assets/camera-card.svg" alt="" loading="lazy" decoding="async"></div><figcaption><strong>Карты памяти</strong><span>Класс скорости и объём сверяем с требованиями камеры и режимом записи.</span></figcaption></figure>
+</div><a class="cta" href="#brief">Подготовить бриф на комплектацию ↘</a></section><section class="panel" id="services"><p class="eyebrow">Дополнительные услуги</p><h2>Что можно подключить к монтажу</h2><div class="cards"><article><h3>Оформление под ваш бренд</h3><p>Согласуем заставку, логотип и шаблон сообщения гостю. По запросу подготовим короткую вертикальную версию.</p></article><article><h3>Поддержка выдачи</h3><p>Повторно отправим ссылку по запросу, уточним ошибочные контакты вместе с площадкой и подготовим отчёт по роликам и отправкам.</p></article><article><h3>Запуск новых точек</h3><p>Перенесём согласованный процесс на другие объекты. Подберём запасной комплект и подготовим инструкцию для сотрудников.</p><a class="path-link" href="#brief" data-scenario="multiple">Обсудить несколько точек ↘</a></article></div></section><section class="panel" id="faq"><h2>Вопросы перед запуском</h2><details><summary>Нужны ли новые камеры, если мы уже снимаем?</summary><p>Сначала оценим тестовый исходник с вашей камеры. Если качество и формат подходят, подключаемся к существующей съёмке.</p></details><details><summary>Гостю обязательно нужен плеер 360°?</summary><p>Формат согласуем на пилоте. Можно подготовить сферическое видео для совместимого плеера или обычный ролик с выбранными ракурсами для телефона.</p></details><details><summary>Что происходит, если нет исходника или в заказе ошибка?</summary><p>Перед запуском согласуем, кто уточняет данные и как площадка передаёт недостающую запись. Отправляем ссылку после сверки заказа с готовым роликом.</p></details></section><section class="panel brief" id="brief"><div><p class="eyebrow">Бриф для площадки</p><h2>Расскажите о проекте</h2><p>Укажите задачу и примерный объём. Скачайте или скопируйте бриф, чтобы передать его команде удобным вам способом.</p></div><form id="form" aria-describedby="privacy-note"><label>Компания или проект<input name="project" autocomplete="organization" required maxlength="150"></label><label>Рабочий контакт<input name="contact" aria-describedby="contact-help" required maxlength="150" placeholder="Почта, телефон или @username"><small id="contact-help" class="form-help">Достаточно одного способа связи.</small></label><label>С чего начинаем<select name="format" id="scenario"><option value="existing">Есть оборудование, нужен регулярный монтаж</option><option value="launch">Нужно запустить съёмку</option><option value="multiple">Нужно подключить несколько точек</option></select></label><label>Примерный объём заказов<input name="volume" maxlength="100" placeholder="Например, 30 роликов в день"></label><div class="form-actions"><button type="submit">Скачать бриф ↓</button><button type="button" class="secondary-action" id="copy-brief">Скопировать бриф</button></div><p id="privacy-note" class="form-note">Форма не отправляет данные. Бриф сохранится только у вас.</p><p id="status" role="status" aria-live="polite"></p><label class="manual-copy" id="manual-copy" hidden>Бриф для ручного копирования<textarea id="copy-text" readonly></textarea></label></form></section></main><footer>Монтаж 360° · Демо сайта · Не принимает заявки онлайн</footer><div class="mobile-action"><a class="cta" href="#brief">Подготовить бриф ↘</a></div>
+<script>
+const scenario = document.querySelector('#scenario');
+document.querySelectorAll('[data-scenario]').forEach(link => { link.addEventListener('click', () => { scenario.value = link.dataset.scenario; }); });
+const demoVideo = document.querySelector('#demo-video');
+const demoEmpty = document.querySelector('#demo-empty');
+const demoFile = document.querySelector('#demo-file');
+const demoStatus = document.querySelector('#demo-status');
+const resetDemo = document.querySelector('#reset-demo');
+const sampleSource = demoVideo.getAttribute('src');
+const samplePoster = demoVideo.getAttribute('poster');
+let localDemoUrl;
+
+demoVideo.addEventListener('loadedmetadata', () => {
+ demoEmpty.hidden = true;
+ demoVideo.hidden = false;
+ demoStatus.textContent = localDemoUrl ? 'Локальный файл открыт.' : '';
+});
+
+demoVideo.addEventListener('error', () => {
+ demoVideo.hidden = true;
+ demoEmpty.hidden = false;
+ demoStatus.textContent = 'Не удалось открыть видео. Попробуйте MP4 с кодеком H.264 или WebM.';
+});
+
+demoFile.addEventListener('change', () => {
+ const file = demoFile.files[0];
+ if (!file) return;
+ if (localDemoUrl) URL.revokeObjectURL(localDemoUrl);
+ localDemoUrl = URL.createObjectURL(file);
+ demoStatus.textContent = 'Открываем локальный файл…';
+ demoVideo.removeAttribute('poster');
+ demoVideo.src = localDemoUrl;
+ resetDemo.hidden = false;
+ demoFile.value = '';
+});
+
+resetDemo.addEventListener('click', () => {
+ if (localDemoUrl) URL.revokeObjectURL(localDemoUrl);
+ localDemoUrl = undefined;
+ demoVideo.poster = samplePoster;
+ demoVideo.src = sampleSource;
+ resetDemo.hidden = true;
+ demoFile.focus();
+});
+window.addEventListener('pagehide', () => { if (localDemoUrl) URL.revokeObjectURL(localDemoUrl); });
+const gear = document.querySelector('#gear-list');
+document.querySelectorAll('[data-scroll]').forEach(button => {
+ button.addEventListener('click', () => {
+  const step = gear.firstElementChild.getBoundingClientRect().width + 12;
+  const motion = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  gear.scrollBy({left: Number(button.dataset.scroll) * step, behavior: motion});
+ });
+});
+const canvas=document.querySelector('#sphere');
+const ctx=canvas.getContext('2d');
+function draw(){
+ const {width,height}=canvas.getBoundingClientRect();
+ const scale=devicePixelRatio||1;
+ canvas.width=Math.round(width*scale);canvas.height=Math.round(height*scale);
+ ctx.scale(scale,scale);ctx.translate(width/2,height/2);ctx.rotate(-.27);
+ const radius=Math.min(width,height)*.43;
+ ctx.strokeStyle='#a7c45280';ctx.lineWidth=1;
+ for(let i=1;i<=9;i++){ctx.beginPath();ctx.ellipse(0,0,radius*i/9,radius,0,0,Math.PI*2);ctx.stroke()}
+ for(let i=-4;i<=4;i++){const offset=i/5;ctx.beginPath();ctx.ellipse(0,radius*offset,radius*Math.sqrt(1-offset*offset),radius*.14,0,0,Math.PI*2);ctx.stroke()}
+}
+new ResizeObserver(draw).observe(canvas);
+const briefForm = document.querySelector('#form');
+const projectField = briefForm.elements.namedItem('project');
+const contactField = briefForm.elements.namedItem('contact');
+const briefStatus = document.querySelector('#status');
+const manualCopy = document.querySelector('#manual-copy');
+const copyText = document.querySelector('#copy-text');
+
+function briefText() {
+ const data = new FormData(briefForm);
+ const project = data.get('project').trim();
+ const contact = data.get('contact').trim();
+ const digitCount = contact.replace(/\D/g, '').length;
+ const looksLikePhone = /^[+\d ()-]+$/.test(contact) && digitCount >= 7 && digitCount <= 15;
+ const looksLikeEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
+ const looksLikeTelegram = /^@[A-Za-z0-9_]{4,32}$/.test(contact);
+ projectField.setCustomValidity(project ? '' : 'Укажи название компании или проекта.');
+ contactField.setCustomValidity(looksLikePhone || looksLikeEmail || looksLikeTelegram ? '' : 'Укажи почту, телефон или Telegram в формате @username.');
+ if (!briefForm.reportValidity()) return null;
+ return ['Бриф для площадки 360°','Компания или проект: '+project,'Рабочий контакт: '+contact,'Сценарий сотрудничества: '+scenario.selectedOptions[0].textContent,'Объём заказов: '+(data.get('volume').trim()||'Уточняется')].join('\n\n');
+}
+
+briefForm.addEventListener('input', event => {
+ if (event.target === projectField || event.target === contactField) event.target.setCustomValidity('');
+ briefStatus.textContent = '';
+ manualCopy.hidden = true;
+ copyText.value = '';
+});
+
+briefForm.addEventListener('submit',event=>{
+ event.preventDefault();
+ const content = briefText();
+ if (!content) return;
+ const url = URL.createObjectURL(new Blob(['\uFEFF',content],{type:'text/plain;charset=utf-8'}));
+ const link = document.createElement('a');
+ link.href = url;
+ link.download = 'brief-360.txt';
+ document.body.append(link);
+ link.click();
+ link.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),1000);
+ briefStatus.textContent='Бриф подготовлен к скачиванию. Он не отправлен.';
+});
+
+document.querySelector('#copy-brief').addEventListener('click', async () => {
+ const content = briefText();
+ if (!content) return;
+ try {
+  await navigator.clipboard.writeText(content);
+  briefStatus.textContent='Бриф скопирован. Он не отправлен.';
+ } catch {
+  manualCopy.hidden = false;
+  copyText.value = content;
+  copyText.focus();
+  copyText.select();
+  briefStatus.textContent='Автокопирование недоступно. Текст выделен для ручного копирования.';
+ }
+});
+</script></body></html>
+
+
+
+
+
+
+
+
+
+
+
