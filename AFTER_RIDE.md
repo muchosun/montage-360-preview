@@ -1,28 +1,17 @@
-# Блок «После заезда»
+# Пример WhatsApp после заезда
 
-Секция после процесса выдачи видео показывает три шага: отправка ролика, приглашение к честному публичному отзыву или прямой обратной связи, позднее приглашение на новый заезд только после отдельного согласия. Отзывы помогают новым гостям выбрать площадку. Кампании и рассылки описаны как отдельная опция по согласованию.
+В секции показан возможный путь гостя: получить видео, оставить честный публичный отзыв или написать площадке напрямую, позднее получить приглашение на новый заезд только после отдельного согласия. Кампании и рассылки — отдельная опция по согласованию.
 
-Переписка с трассой «Круг» вымышленная и подписана «Пример переписки». Сообщения и варианты ответа — обычный HTML, без обработчиков, ссылок на отзыв, форм, подписки, отправки или интеграции с WhatsApp. Единственный действующий CTA секции ведёт на существующий номер Александра. Вид и условия запуска будущего процесса обсуждаются отдельно.
+Вместо прежнего HTML-мессенджера используется новый макет узнаваемого интерфейса WhatsApp, созданный встроенным ImageGen. Для проверки визуального языка просмотрены [официальные скриншоты WhatsApp в App Store](https://apps.apple.com/us/app/whatsapp-messenger/id310633997). Переписка и площадка «Картинг „Пример“» вымышлены. Изображение не является настоящей клиентской перепиской или работающей интеграцией.
 
-## Иллюстрация
-
-- Создана встроенным ImageGen; не фотография выполненного проекта.
-- Файл: [assets/photo-after-ride.webp](assets/photo-after-ride.webp), 960 × 1200, 40 116 байт. Метаданные удалены, загрузка ленивая, размеры и alt заданы.
-- Текст не встроен в изображение: HTML остаётся читаемым при масштабировании и доступен вспомогательным технологиям.
-- Исходный PNG не включён в репозиторий.
+- Файл: [assets/whatsapp-example.webp](assets/whatsapp-example.webp), 720 × 1280, 92 698 байт.
+- Изображение загружается лениво, размеры и alt заданы; пример можно открыть крупнее.
+- Основной смысл переписки повторён доступным HTML-текстом рядом. Макет не собирает данные и не отправляет сообщения.
+- Условия отдельного согласия и возможность отказа описаны в тексте. Никакого отбора только положительных отзывов нет.
+- Исходный PNG и референсы не публикуются. Метаданные WebP удалены.
 
 Точный prompt ImageGen:
 
-> Use case: photorealistic-natural. Asset type: original editorial photograph for the existing Russian B2B adventure-video website Montage 360, vertical 4:5 composition. Primary request: a realistic hand holding a black smartphone at an outdoor karting track after a ride, cinematic depth of field, quiet premium atmosphere. Scene: asphalt track curving away with soft olive woodland and subtle warm evening lights, blurred track barriers in the distance, no visible people or faces. Subject: a single anatomically natural adult hand holding a modern black phone near the lower right of the image; the phone screen is blank dark reflective glass, no UI, no text. Composition: the phone and hand occupy the lower right third, background track remains visible in the upper and left portions; useful calm negative space across the upper and middle area for a separate HTML conversation overlay. Style: convincing natural photograph, 50mm lens, warm late-afternoon light, detailed skin and glass, subdued deep olive, charcoal, cream and lime highlights compatible with a dark olive website. Constraints: no text, letters, numbers, logos, watermarks, notification symbols, identifiable faces, actual app screenshots, or advertising signage. This is an illustrative fictional scene, not a photograph of a completed client project.
+> Use case: ui-mockup. Create a very high quality, sharply readable, front-facing iPhone screenshot mockup of the actual familiar WhatsApp chat interface in Russian, not a generic messenger. Native WhatsApp visual language as in the official WhatsApp App Store conversation screenshots: white/light gray top navigation with back chevron, round neutral avatar, contact name and video-call/phone icons; pale cream doodle-pattern chat wallpaper; white left-aligned incoming message bubbles; pale green right-aligned outgoing bubbles; small timestamps, blue read ticks; real WhatsApp-style message composer at bottom with plus, rounded text field, camera and microphone icons. A thin black rounded phone bezel is allowed; screen must occupy almost the full image. Straight on, no perspective distortion, no photographic background, no marketing headline outside the screen. Portrait 9:16. Make message typography unusually crisp and large enough to remain readable when the full image is displayed 320 pixels wide. No emoji characters in message content. No real people, phone numbers, private URLs, verified-business badge or invented partner endorsement. Contact name exactly: «Картинг «Пример»». Chat is fictional. Compose this exact conversation, preserving correct Russian spelling and punctuation: date pill «Сегодня»; incoming video attachment with a small karting-track thumbnail with no identifiable people, play triangle and duration «0:12», caption «Ваш ролик с заезда готов.» and timestamp «14:05»; next incoming message «Как прошёл заезд? Будем рады честному отзыву. Можно оставить отзыв или написать нам напрямую.» with two native WhatsApp Business reply-action rows «Оставить отзыв» and «Написать нам»; small outgoing green reply «Спасибо! Посмотрю.» with «14:07» and blue double-checks; later date pill «3 декабря»; incoming message «Хотите ещё один заезд? Выберите удобное время.» with a native action row «Посмотреть даты» and timestamp «11:00». Bottom composer placeholder exactly «Сообщение». Keep all chat messages fully visible, not clipped, with realistic WhatsApp spacing and a clear chronological separation. Do not add any other promotional copy, real contact details, ratings, stars or QR codes. Final image must unmistakably resemble WhatsApp on iPhone, with accurate icons and interface proportions, and perfectly readable Russian text.
 
-## Проверки
-
-- Chrome: 320 × 780, 390 × 844, 1440 × 1000, обычный вход на главную и прокрутка к секции. Все три шага, разделение моментов переписки и условие отдельного согласия присутствуют; горизонтального переполнения нет.
-- Фото загружается, WebP 960 × 1200; loading="lazy", width/height и alt заданы. Подпись указывает пример переписки и ImageGen.
-- Декоративные варианты ответа не являются фокусируемыми кнопками или ссылками. CTA фокусируется клавиатурой и имеет высоту не менее 44 px. Контраст новых текстовых пар от 5.4:1.
-- В браузере нет JS/HTTP-ошибок или запросов отправки. Формы, сбор данных и сторонние ресурсы не добавлены.
-- Все восемь видео повторно запущены на трёх ширинах: 24 воспроизведения, один плеер, ненулевой аудиосигнал, muted=false. MP4 до клика не загружаются.
-- Бинарники видео, оригинальный звук, код плеера и все 26 ссылок с ?v=20261126-audio8 сохранены. Title, description, H1, canonical, sitemap, noindex страницы гостя, телефон и Telegram сохранены.
-- node --check examples.js и git diff --check проходят.
-
-Физические устройства iOS/Android и слуховая оценка аудио не проверялись. Существующие ролики не изменялись. Локальные скриншоты и скрипты проверки в output/ не публикуются; для отдельных снимков секции фиксированные элементы навигации скрыты только на время снимка.
+Проверки новой страницы и коммерческой подачи — в [SALES_REVIEW.md](SALES_REVIEW.md).

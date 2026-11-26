@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#151713">
-  <title>Ваше видео — демонстрация страницы гостя · Монтаж 360°</title>
+  <title>Как гость получает видео — пример страницы · Монтаж 360°</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="sales-rewrite.css?v=20261126-sales1">
 </head>
 <body class="guest-page">
   <a class="skip-link" href="#guest-main">К видео</a>
-  <header class="site-header guest-header wrap"><a class="brand" href="index.html" aria-label="Монтаж 360° — на главную"><img src="assets/mark.svg" width="35" height="35" alt=""><span>монтаж<span class="brand-degree">360°</span></span></a><a class="text-link" href="index.html#examples">На сайт <span aria-hidden="true">↗</span></a></header>
+  <header class="site-header guest-header wrap"><a class="brand" href="index.html" aria-label="Монтаж 360° — на главную"><img src="assets/mark.svg" width="35" height="35" alt=""><span>монтаж<span class="brand-degree">360°</span></span></a><a class="text-link" href="index.html#examples">На сайт для площадок</a></header>
   <main class="guest-main" id="guest-main">
-    <header><p class="eyebrow">Демо страницы гостя</p><h1>Ещё раз.<br>Те самые эмоции.</h1><p>Здесь гость может посмотреть и сохранить готовый ролик.</p></header>
-    <p class="guest-banner">Синтетическое демо, не реальный заезд. Обычное видео с готовым ракурсом; это не сферический просмотр 360°.</p>
-    <div class="video-frame"><video id="guest-video" src="demo.mp4" poster="demo-poster.png" controls playsinline preload="metadata" aria-label="Синтетический демонстрационный ролик, 8 секунд, без звука"></video><div class="video-error" id="guest-error" role="status" hidden><strong>Не получилось открыть демо</strong><p>Обновите страницу или <a class="text-link" href="demo.mp4">откройте MP4 отдельно ↗</a>.</p></div></div>
-    <div class="guest-actions"><a class="button" id="download" href="demo.mp4" download="montage-demo-flat.mp4">Скачать демо <span aria-hidden="true">↓</span></a><p>MP4 · 8 секунд · без звука</p></div>
-    <p class="guest-help">Нужен ролик с вашего заезда? Обратитесь к команде площадки, где проходила съёмка. Эта страница показывает только пример выдачи.</p>
-    <noscript><p class="guest-help">Можно воспользоваться встроенным плеером или скачать демонстрационный MP4.</p></noscript>
+    <header><p class="eyebrow">Пример страницы гостя</p><h1>Ваше видео<br>с заезда.</h1><p>На такой странице гость может посмотреть и скачать готовый ролик.</p></header>
+    <p class="guest-banner">Для примера используется короткая синтетическая запись. Это обычный MP4, не панорамное видео.</p>
+    <div class="video-frame"><video id="guest-video" src="demo.mp4" poster="demo-poster.png" controls playsinline preload="metadata" aria-label="Синтетический демонстрационный ролик, 8 секунд, без звука"></video><div class="video-error" id="guest-error" role="status" hidden><strong>Не получилось загрузить пример</strong><p>Обновите страницу или <a class="text-link" href="demo.mp4">откройте MP4 отдельно</a>.</p></div></div>
+    <div class="guest-actions"><a class="button" id="download" href="demo.mp4" download="montage-demo-flat.mp4">Скачать пример</a><p>MP4 · 8 секунд · без звука</p></div>
+    <p class="guest-help">Ищете видео со своего заезда? Обратитесь к сотрудникам площадки, где вы катались. Здесь показан только пример выдачи ролика.</p>
+    <noscript><p class="guest-help">Посмотрите пример во встроенном плеере или скачайте MP4.</p></noscript>
   </main>
   <script>
     (() => {
