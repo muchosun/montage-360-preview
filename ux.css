@@ -376,3 +376,13 @@
 .venue-site .button:not(.button-outline):hover { background:#ff825c;border-color:#ff825c;color:#102b40; }
 .venue-site .button:not(.button-outline):active { background:#ed572b;border-color:#ed572b; }
 .venue-site .viewer-navigation button { font-family:inherit; }
+
+.venue-site .sales-economics .eyebrow,.venue-site .calculation-assumptions { color:#506577; }
+.venue-site .sales-economics p { color:#506577!important; }
+.venue-site .sales-economics .calculation-result { color:#102b40!important; }
+.venue-site .calculation-assumptions,.venue-site .calculation-assumptions>div { border-color:#bacbd8; }
+.venue-site .scenario-track { border-color:#94a8b7; }
+
+.venue-site .guest-main h1 { font-size:clamp(2.25rem,6vw,4rem);line-height:1.1; }
+.venue-site .guest-banner { background:#e8eef3;color:#405d73;border-color:#ff6b3d;font-size:.9375rem; }
+.venue-site .guest-actions p,.venue-site .guest-help { color:#506577;font-size:.875rem; }

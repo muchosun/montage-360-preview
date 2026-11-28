@@ -1,0 +1,28 @@
+openapi: 3.0.0
+info:
+  title: montage-360-leads
+  version: 1.0.0
+paths:
+  /leads:
+    options:
+      responses:
+        '204': { description: CORS preflight }
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: ${LEAD_FUNCTION_ID}
+        tag: '$latest'
+        service_account_id: ${GATEWAY_SERVICE_ACCOUNT_ID}
+        payload_format_version: '1.0'
+    post:
+      responses:
+        '201': { description: Saved with opaque ID }
+        '200': { description: Previously saved request }
+        '422': { description: Invalid form }
+        '429': { description: Request limit reached }
+        '503': { description: No confirmed save }
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: ${LEAD_FUNCTION_ID}
+        tag: '$latest'
+        service_account_id: ${GATEWAY_SERVICE_ACCOUNT_ID}
+        payload_format_version: '1.0'

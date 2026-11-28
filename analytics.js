@@ -23,8 +23,8 @@
     }
     try { sessionStorage.setItem(storageKey, JSON.stringify(attribution)); } catch { /* Optional storage. */ }
   }
-  // A future validated server handler may read this before submission.
-  // There is no lead form or lead_form_success emitter on the current site.
+  // The form reads this before submission. Only its confirmed saved-ID path
+  // can emit lead_form_success; this bootstrap tracks contact clicks separately.
   window.M360Attribution = Object.freeze({ get: () => ({ ...attribution }) });
 
   const rawId = window.M360_ANALYTICS && window.M360_ANALYTICS.counterId;
@@ -43,7 +43,7 @@
   send(id, "init", { webvisor: false, clickmap: false, trackLinks: false, accurateTrackBounce: true });
   document.addEventListener("click", event => {
     if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    const link = event.target.closest("a[href]");
+    const link = event.target && typeof event.target.closest === "function" ? event.target.closest("a[href]") : null;
     if (!link) return;
     const url = new URL(link.href);
     const channel = url.protocol === "tel:" ? "phone" :

@@ -32,6 +32,9 @@
   <script src="ux.js?v=20261128-ux1" defer></script>
   <script src="analytics-config.js?v=20261128-ux1" defer></script>
   <script src="analytics.js?v=20261128-ux1" defer></script>
+  <link rel="stylesheet" href="lead-form.css?v=20261128-lead1">
+  <script src="lead-config.js?v=20261128-lead1" defer></script>
+  <script src="lead-form.js?v=20261128-lead1" defer></script>
 </head>
 <body id="top" class="venue-site">
   <a class="skip-link" href="#main">Перейти к содержанию</a>
@@ -47,7 +50,7 @@
         <h1 id="hero-title">Зарабатывайте<br><em>на видео с заездов.</em></h1>
         <p class="hero-description">Предложите гостю ролик с его участием. Мы смонтируем запись и отправим готовое видео — вам не придётся нанимать монтажёра.</p>
         <p class="hero-share"><strong>До 70% выручки от продажи роликов — площадке.</strong><span>Долю, расходы и сроки согласуем до запуска.</span></p>
-        <div class="actions hero-actions"><a class="button" href="tel:+79522176744">Позвонить и обсудить запуск</a><a class="button button-outline" href="#examples">Посмотреть видео</a></div>
+        <div class="actions hero-actions"><a class="button" href="tel:+79522176744" data-lead-cta>Позвонить и обсудить запуск</a><a class="button button-outline" href="#examples">Посмотреть видео</a></div>
         <a class="hero-telegram" href="https://t.me/GOODTOBEDONE">Удобнее переписка? Напишите в Telegram</a>
         <div class="hero-tags" aria-label="Форматы видео"><span>Обычные ролики</span><span>Видео 360°</span></div>
       </div>
@@ -185,16 +188,33 @@
       <div class="faq-list">
         <details><summary>Сколько будет стоить запуск?</summary><p>Если камеры уже есть, начнём с ваших записей. Если нет — добавим в расчёт оборудование и организацию съёмки. Цена зависит и от объёма монтажа. До старта договоримся о затратах, доле площадки и стоимости теста.</p></details>
         <details><summary>Площадка может получать 70%?</summary><p>Да, такая доля от продажи роликов возможна при согласованных условиях. Но это выручка, а не чистая прибыль: из неё нужно вычесть ваши расходы на оборудование, съёмку и работу сотрудников. Точную долю фиксируем до запуска.</p></details>
-        <details id="economics-details"><summary>Когда окупится оборудование?</summary><p>Зависит от вложений, цены ролика и числа покупок. Поток гостей сам по себе этого не показывает: видео купят не все. Сначала посчитаем, сколько остаётся у площадки после расходов.</p><p class="formula">Срок окупаемости в месяцах = вложения на старте ÷ (выручка от видео за месяц × доля площадки − ежемесячные расходы площадки).</p><p>Формула работает, если после ежемесячных расходов остаётся положительная сумма. Без ваших цифр обещать срок окупаемости было бы нечестно.</p></details>
+        <details id="economics-details"><summary>Когда окупится оборудование?</summary><p>Зависит от вложений, цены ролика и числа покупок. Поток гостей сам по себе этого не показывает: видео купят не все. Сначала посчитаем, сколько остаётся у площадки после расходов.</p><p class="formula">Срок окупаемости в месяцах = вложения на старте ÷ (выручка от видео за месяц × доля площадки − ежемесячные расходы площадки).</p><p>После ежемесячных расходов должна оставаться положительная сумма. Тогда можно посчитать, за сколько месяцев вернутся вложения.</p></details>
         <details><summary>Что будут делать наши сотрудники?</summary><p>Предлагать видео гостям, организовывать съёмку и передавать записи. Мы монтируем и отправляем готовые ролики. На тестовом заезде разберём весь путь, чтобы сотрудники понимали свои задачи.</p></details>
         <details><summary>А если заездов много?</summary><p>Расскажите, сколько заездов у вас в обычный день и в пик сезона. Согласуем объём монтажа и срок выдачи. На тесте проверим, как передаются записи и как быстро гость получает ролик.</p></details>
         <details><summary>Нужна камера 360° или подойдёт обычная?</summary><p>Работаем с обоими форматами. Из обычной записи делаем обычный ролик; из видео 360° можно выбрать ракурсы или сохранить сферический формат. Для интерактивного просмотра нужны панорамный исходник и специальный плеер. Здесь в примерах — обычные MP4.</p></details>
       </div>
     </section>
 
+
+    <section class="section wrap lead-section" id="lead" aria-labelledby="lead-title" hidden>
+      <div class="lead-layout"><div><h2 id="lead-title">Получить расчёт<br>для площадки</h2><p class="lead-intro">Расскажите, что у вас за активность и есть ли съёмка. Александр свяжется с вами, чтобы обсудить монтаж, расходы и первый тест.</p><p class="lead-intro">Один контакт — только для ответа на заявку. Подписку на рассылку здесь не оформляем.</p></div>
+      <form class="lead-form" id="lead-form" novalidate>
+        <div class="lead-field lead-wide"><label for="lead-venue">Название или ссылка на площадку</label><input id="lead-venue" name="venue" required maxlength="180" autocomplete="organization" aria-describedby="lead-error-venue"><span class="field-error" id="lead-error-venue" hidden></span></div>
+        <div class="lead-field"><label for="lead-city">Город</label><input id="lead-city" name="city" required maxlength="100" autocomplete="address-level2" aria-describedby="lead-error-city"><span class="field-error" id="lead-error-city" hidden></span></div>
+        <div class="lead-field"><label for="lead-activity">Тип активности</label><select id="lead-activity" name="activity" required aria-describedby="lead-error-activity"><option value="">Выберите</option><option value="karting">Картинг</option><option value="tubing">Тюбинг</option><option value="quad">Квадротуры</option><option value="rafting">Рафтинг</option><option value="attraction">Аттракционы</option><option value="other">Другое</option></select><span class="field-error" id="lead-error-activity" hidden></span></div>
+        <div class="lead-field"><label for="lead-cameras">Есть ли камеры?</label><select id="lead-cameras" name="cameras" required aria-describedby="lead-error-cameras"><option value="">Выберите</option><option value="yes">Да, уже снимаем</option><option value="no">Пока нет</option><option value="unsure">Нужно обсудить</option></select><span class="field-error" id="lead-error-cameras" hidden></span></div>
+        <div class="lead-field"><label for="lead-flow">Гостей в день <small>необязательно</small></label><input id="lead-flow" name="flow" type="number" min="0" max="100000" step="1" inputmode="numeric" aria-describedby="lead-error-flow"><span class="field-error" id="lead-error-flow" hidden></span></div>
+        <div class="lead-field"><label for="lead-contact-type">Как с вами связаться?</label><select id="lead-contact-type" name="contact_type"><option value="phone">Телефон</option><option value="telegram">Telegram</option><option value="email">Электронная почта</option></select></div>
+        <div class="lead-field"><label for="lead-contact">Ваш контакт</label><input id="lead-contact" name="contact" type="tel" required maxlength="160" autocomplete="tel" aria-describedby="contact-hint lead-error-contact"><small id="contact-hint">Например, +7 900 000-00-00</small><span class="field-error" id="lead-error-contact" hidden></span></div>
+        <div class="lead-field lead-wide"><label for="lead-comment">Что ещё важно знать? <small>необязательно</small></label><textarea id="lead-comment" name="comment" maxlength="1500" rows="3" aria-describedby="lead-error-comment"></textarea><span class="field-error" id="lead-error-comment" hidden></span></div>
+        <div class="lead-wide"><label class="lead-consent"><input name="consent" type="checkbox" required aria-describedby="lead-error-consent"><span>Согласен на обработку данных для ответа на заявку. <a href="" data-privacy-link target="_blank" rel="noopener">Условия обработки данных</a>.</span></label><span class="field-error" id="lead-error-consent" hidden></span></div>
+        <div class="lead-actions lead-wide"><button class="button" type="submit">Получить расчёт для площадки</button><p class="lead-status" id="lead-status" role="status" aria-live="polite"></p><p class="lead-error" id="lead-error" role="alert" hidden></p></div>
+      </form></div>
+    </section>
+
     <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="wrap contact-layout"><div><h2 id="contact-title">Давайте разберём<br>вашу площадку.</h2><p>Позвоните Александру или напишите в Telegram. Расскажите, какие у вас заезды, сколько бывает гостей и есть ли камеры. Обсудим подходящий формат, расходы и условия первого теста.</p></div><div class="contact-card"><p class="contact-name">Александр · Монтаж 360°</p><a class="contact-phone" href="tel:+79522176744">+7 952 217-67-44</a><a class="button" href="tel:+79522176744">Позвонить Александру</a><div class="messenger-links"><a href="https://t.me/GOODTOBEDONE">Написать в Telegram</a><a data-contact="max" hidden>MAX</a></div><p class="contact-caption">Сначала обсудим задачу и посчитаем затраты.<br>Покупать оборудование до разговора не нужно.</p></div></div></section>
   </main>
   <footer class="site-footer wrap"><a class="brand" href="#top" aria-label="Монтаж 360° — в начало"><img src="assets/mark.svg" width="30" height="30" alt=""><span>монтаж<span class="brand-degree">360°</span></span></a><p>Монтаж видео 360° и обычных роликов для аттракционов, прокатов и активного отдыха.</p><a class="text-link" href="#top">Наверх</a></footer>
-  <div class="mobile-contact"><a class="button" href="tel:+79522176744">Обсудить запуск по телефону</a></div>
+  <div class="mobile-contact"><a class="button" href="tel:+79522176744" data-lead-cta>Обсудить запуск по телефону</a></div>
 </body>
 </html>
