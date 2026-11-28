@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://montazh360.ru/sitemap.xml
