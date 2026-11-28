@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#151713">
+  <meta name="theme-color" content="#f4f6f8">
   <meta name="description" content="Монтаж видео 360° и обычных роликов для аттракционов и прокатов. Монтируем и отправляем видео гостям. Площадке — до 70% выручки по согласованным условиям.">
   <title>Монтаж видео 360° для аттракционов и прокатов</title>
-  <link rel="canonical" href="https://muchosun.github.io/montage-360-preview/">
+  <link rel="canonical" href="https://montazh360.ru/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:site_name" content="Монтаж 360°">
   <meta property="og:title" content="Монтаж видео 360° для аттракционов и прокатов">
   <meta property="og:description" content="Монтируем и отправляем гостям видео с заездов. Площадке — до 70% выручки от продажи роликов по согласованным условиям.">
-  <meta property="og:url" content="https://muchosun.github.io/montage-360-preview/">
-  <meta property="og:image" content="https://muchosun.github.io/montage-360-preview/assets/share-preview.jpg">
+  <meta property="og:url" content="https://montazh360.ru/">
+  <meta property="og:image" content="https://montazh360.ru/assets/share-preview.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="640">
   <meta property="og:image:height" content="480">
@@ -23,62 +23,51 @@
   <link rel="stylesheet" href="examples.css?v=20261126-audio8">
   <link rel="stylesheet" href="sales-after-ride.css?v=20261126-sales1">
   <link rel="stylesheet" href="sales-rewrite.css?v=20261126-sales1">
+  <link rel="preload" href="assets/fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="ux.css?v=20261128-ux2">
   <script src="site-config.js" defer></script>
   <script src="site.js" defer></script>
   <script src="examples.js?v=20261126-audio8" defer></script>
   <script src="economics.js?v=20261126-sales1" defer></script>
+  <script src="ux.js?v=20261128-ux1" defer></script>
+  <script src="analytics-config.js?v=20261128-ux1" defer></script>
+  <script src="analytics.js?v=20261128-ux1" defer></script>
+  <link rel="stylesheet" href="lead-form.css?v=20261128-lead1">
+  <script src="lead-config.js?v=20261128-lead1" defer></script>
+  <script src="lead-form.js?v=20261128-lead1" defer></script>
 </head>
-<body id="top">
+<body id="top" class="venue-site">
   <a class="skip-link" href="#main">Перейти к содержанию</a>
   <header class="site-header wrap">
     <a class="brand" href="#top" aria-label="Монтаж 360° — в начало"><img src="assets/mark.svg" width="35" height="35" alt=""><span>монтаж<span class="brand-degree">360°</span></span></a>
-    <nav class="desktop-nav" aria-label="Основная навигация"><a href="#benefit">Доход от видео</a><a href="#examples">Примеры</a><a href="#process">Как запустить</a></nav>
-    <a class="header-contact" href="tel:+79522176744">Позвонить Александру</a>
+    <nav class="desktop-nav" aria-label="Основная навигация"><a href="#examples">Примеры видео</a><a href="#benefit">Доход площадки</a><a href="#process">Как это работает</a><a href="#contact">Контакты</a></nav>
+    <a class="header-contact" href="tel:+79522176744" aria-label="Позвонить Александру: +7 952 217-67-44">+7 952 217-67-44</a>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Монтаж видео 360° для аттракционов и прокатов</p>
-        <h1 id="hero-title">Продавайте гостям<br><em>видео с заезда.</em></h1>
-        <p class="hero-description">Монтируем видео 360° и обычные ролики с заездов. Вы предлагаете гостю видео, мы собираем и отправляем. Вам — до 70% выручки от продажи роликов на согласованных условиях.</p>
-        <div class="actions hero-actions"><a class="button" href="tel:+79522176744">Обсудить запуск</a><a class="button button-outline" href="#examples">Смотреть примеры</a></div>
-        <a class="hero-telegram" href="https://t.me/GOODTOBEDONE">Написать Александру в Telegram</a>
-        <div class="hero-tags" aria-label="Что делаем"><span>Обычные ролики</span><span>Видео 360°</span><span>Монтаж и отправка</span></div>
+        <h1 id="hero-title">Зарабатывайте<br><em>на видео с заездов.</em></h1>
+        <p class="hero-description">Предложите гостю ролик с его участием. Мы смонтируем запись и отправим готовое видео — вам не придётся нанимать монтажёра.</p>
+        <p class="hero-share"><strong>До 70% выручки от продажи роликов — площадке.</strong><span>Долю, расходы и сроки согласуем до запуска.</span></p>
+        <div class="actions hero-actions"><a class="button" href="tel:+79522176744" data-lead-cta>Позвонить и обсудить запуск</a><a class="button button-outline" href="#examples">Посмотреть видео</a></div>
+        <a class="hero-telegram" href="https://t.me/GOODTOBEDONE">Удобнее переписка? Напишите в Telegram</a>
+        <div class="hero-tags" aria-label="Форматы видео"><span>Обычные ролики</span><span>Видео 360°</span></div>
       </div>
       <figure class="hero-proof">
-        <figcaption class="hero-proof-heading"><strong>Что получит ваш гость</strong><span>Кадры из готовых роликов</span></figcaption>
-        <div class="hero-proof-main"><img src="assets/examples/balloon.webp?v=20261126-audio8" width="640" height="480" fetchpriority="high" alt="Кадр из примера: воздушный шар над горной долиной."><span>Воздушный шар</span></div>
-        <div class="hero-proof-pair"><div><img src="assets/examples/atv-tour-preview.webp?v=20261126-sales1" width="640" height="480" alt="Кадр из примера квадротура на лесном маршруте."><span>Квадротуры</span></div><div><img src="assets/examples/rafting.webp?v=20261126-audio8" width="640" height="480" alt="Кадр из примера сплава по реке."><span>Рафтинг</span></div></div>
-        <a class="hero-proof-link" href="#examples">Посмотреть все восемь примеров</a>
+        <figcaption class="hero-proof-heading"><strong>Гость в кадре.<br>Трасса — его глазами.</strong><span>Один ролик · 12 секунд</span></figcaption>
+        <a class="hero-reframe" href="assets/examples/sanki-warm-pov.mp4?v=20261126-audio8" data-preview-id="example-sanki-warm-pov" aria-label="Посмотреть ролик: гость и поворот камеры к бобслейной трассе, 12 секунд">
+          <span class="reframe-shot"><img src="assets/hero-guest.webp" width="360" height="640" fetchpriority="high" alt="Гость в бобе во время заезда. Лицо обезличено."><span>Гость</span></span>
+          <span class="reframe-shot"><img src="assets/hero-track.webp" width="360" height="640" alt="Вид вперёд на ту же бобслейную трассу после поворота камеры."><span>Трасса</span></span>
+          <span class="reframe-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7L9 19V5Z" fill="currentColor"/></svg>Посмотреть ролик</span>
+        </a>
+        <a class="hero-proof-link" href="#examples">Посмотреть все 8 примеров</a>
       </figure>
     </section>
     <div class="activity-strip" aria-label="Для каких площадок"><div class="wrap"><span>Картинг</span><i aria-hidden="true">/</i><span>Тюбинг</span><i aria-hidden="true">/</i><span>Аттракционы</span><i aria-hidden="true">/</i><span>Квадротуры</span><i aria-hidden="true">/</i><span>Активный отдых</span></div></div>
 
-    <section class="benefit light-section" id="benefit" aria-labelledby="benefit-title"><div class="wrap">
-      <div class="section-heading"><p class="eyebrow">Доход площадки</p><h2 id="benefit-title">Дополнительная выручка<br><span class="muted-heading">без новых аттракционов.</span></h2></div>
-      <div class="revenue-layout">
-        <div class="revenue-number"><span>до</span><strong>70<span>%</span></strong><p>от продаж видео<br>может получать площадка</p></div>
-        <div class="revenue-copy"><h3>Своего монтажёра<br>нанимать не нужно.</h3><p>Вы уже привлекаете гостей и проводите заезды. Предложите им ещё и личный ролик. Мы отберём моменты, соберём видео и отправим его гостю.</p><p class="terms-note">Конкретную долю, расходы на запуск и порядок расчётов согласуем до начала работы. Доля выручки — не чистая прибыль площадки.</p></div>
-      </div>
-      <div class="benefit-grid">
-        <article><span class="index">01</span><h3>Ещё одна продажа</h3><p>Видео покупает гость, который уже пришёл на вашу площадку. Для этой продажи не нужно запускать новый аттракцион.</p></article>
-        <article><span class="index">02</span><h3>Монтаж — на нашей команде</h3><p>Не придётся искать монтажёра, собирать ролики по вечерам и вручную отправлять каждый файл.</p></article>
-        <article><span class="index">03</span><h3>Сотрудникам понятна их задача</h3><p>Предложить видео, организовать съёмку и передать запись. Схему работы и мотивацию команды обсудим перед запуском.</p></article>
-      </div>
-      <section class="sales-economics" aria-labelledby="calculation-title" data-price="1000" data-days="26" data-share="0.7">
-        <div class="calculation-copy"><p class="eyebrow">Пример расчёта</p><h3 id="calculation-title">Что дают <span data-order-count>10</span> оплаченных роликов в день</h3><p class="calculation-result"><output data-venue-revenue aria-label="Доля площадки в расчётном примере">182 000</output><span>₽ в месяц</span></p><p class="calculation-result-label">Доля площадки до её расходов</p><p class="calculation-total">Продажи видео всего: <strong data-total-revenue>260 000 ₽</strong></p>
-          <dl class="calculation-assumptions" id="calculation-assumptions"><div><dt>Цена ролика в примере</dt><dd>1 000 ₽</dd></div><div><dt>Рабочих дней в месяц</dt><dd>26</dd></div><div><dt>Доля площадки в примере</dt><dd>70%</dd></div></dl>
-        </div>
-        <div class="calculation-chart"><p class="calculation-chart-title">Выберите число оплаченных роликов в день</p><div class="scenario-bars" role="group" aria-label="Три расчётных сценария" aria-describedby="calculation-assumptions calculation-note">
-          <button type="button" class="scenario" data-orders="5" aria-pressed="false" disabled><span class="scenario-value">91 000 ₽</span><span class="scenario-track"><span class="scenario-column" style="--level:25%"></span></span><span class="scenario-label">5 роликов</span></button>
-          <button type="button" class="scenario is-selected" data-orders="10" aria-pressed="true" disabled><span class="scenario-value">182 000 ₽</span><span class="scenario-track"><span class="scenario-column" style="--level:50%"></span></span><span class="scenario-label">10 роликов</span></button>
-          <button type="button" class="scenario" data-orders="20" aria-pressed="false" disabled><span class="scenario-value">364 000 ₽</span><span class="scenario-track"><span class="scenario-column" style="--level:100%"></span></span><span class="scenario-label">20 роликов</span></button>
-        </div><p class="calculation-note" id="calculation-note">Это расчётный пример, не результат клиента и не прогноз. Число заказов не равно потоку гостей. Реальная доля и доход после расходов зависят от условий проекта.</p></div>
-        <p class="calculation-business">Дополнительная выручка — на зарплаты, аренду и развитие площадки. Расходы и окупаемость считаем по вашим данным.</p><a class="text-link" href="tel:+79522176744">Позвонить и обсудить расчёт</a>
-      </section>
-    </div></section>
     <section class="section wrap examples" id="examples" aria-labelledby="examples-title">
-      <div class="section-heading"><p class="eyebrow">Готовые ролики</p><h2 id="examples-title">Примеры видео</h2></div>
+      <div class="section-heading examples-heading"><div><h2 id="examples-title">Примеры видео</h2></div><span class="examples-count">8 роликов</span></div>
       <div class="examples-grid">
        <article class="example-card is-portrait" id="example-sanki-warm-pov">
         <a class="example-open" href="assets/examples/sanki-warm-pov.mp4?v=20261126-audio8" data-example data-title="Бобслейная трасса · 1" data-width="720" data-height="1280" data-duration="12 секунд" data-sound="Оригинальная дорожка" data-poster="assets/examples/sanki-warm-pov.webp?v=20261126-audio8" aria-label="Смотреть: Бобслейная трасса · 1, 12 секунд">
@@ -129,7 +118,7 @@
         </a>
        </article>
       </div>
-      <div class="examples-links"><a class="text-link" href="guest.html">Как гость получает видео </a><a class="text-link" href="tel:+79522176744">Обсудить мой проект </a></div>
+      <div class="examples-links"><a class="text-link" href="guest.html?v=20261128-ux2">Как выглядит страница гостя</a><a class="text-link" href="tel:+79522176744">Хочу такие ролики для гостей</a></div>
     </section>
     <dialog class="example-viewer" id="example-viewer" aria-labelledby="example-viewer-title" aria-describedby="example-viewer-note">
       <div class="viewer-heading"><div><p class="eyebrow">Пример видео для гостя</p><h2 id="example-viewer-title"></h2></div><button class="viewer-close" type="button" aria-label="Закрыть видео">×</button></div>
@@ -140,49 +129,92 @@
     </dialog>
 
 
-    <section class="section wrap start-section" id="start" aria-labelledby="start-title">
-      <div class="section-heading"><p class="eyebrow">Два варианта запуска</p><h2 id="start-title">Монтаж под вашу съёмку<br>или запуск с нуля.</h2></div>
-      <div class="start-grid"><article><span class="index">КАМЕРЫ УЖЕ ЕСТЬ</span><h3>Подключим монтаж к вашей съёмке.</h3><p>Посмотрим запись, предложим формат ролика и согласуем цену, объём и сроки. Начнём с тестового заезда, чтобы вы оценили результат.</p><a class="text-link" href="https://t.me/GOODTOBEDONE">Обсудить мой исходник</a></article><article><span class="index">СЪЁМКИ ПОКА НЕТ</span><h3>Разберём, что нужно для запуска.</h3><p>Поможем подобрать камеры и крепления. Заранее обсудим затраты, работу сотрудников и передачу записей. Условия теста согласуем до съёмки.</p><a class="text-link" href="tel:+79522176744">Обсудить запуск с нуля</a></article></div>
-    </section>
-
+    <section class="benefit light-section" id="benefit" aria-labelledby="benefit-title"><div class="wrap">
+      <div class="section-heading heading-split"><div><h2 id="benefit-title">Ещё один продукт<br>для ваших гостей.</h2></div><p>Заезд уже продаётся. Добавьте к нему личный ролик — отдельную покупку, для которой не нужен новый аттракцион.</p></div>
+      <div class="revenue-layout">
+        <div class="revenue-copy"><h3>Гость платит за видео.<br>Вы получаете свою долю.</h3><p>Мы отбираем кадры, собираем ролик и отправляем его гостю. Вы организуете съёмку и предлагаете видео на своей площадке.</p></div>
+        <div class="revenue-number"><strong>до 70%</strong><p>выручки от продажи видео — площадке</p><span>Точную долю, затраты на съёмку и порядок расчётов согласуем заранее. Это доля выручки до ваших расходов.</span></div>
+      </div>
+      <div class="benefit-grid">
+        <article><h3>Продаёте тем, кто уже приехал</h3><p>Предлагаете видео гостям своей площадки. У человека остаётся ролик, который можно пересмотреть и показать друзьям.</p></article>
+        <article><h3>Обходитесь без своего монтажёра</h3><p>Не нужно искать специалиста и разбирать записи после смены. Монтаж и проверку готовых роликов берём на себя.</p></article>
+        <article><h3>Не рассылаете файлы вручную</h3><p>Отправляем готовое видео в WhatsApp, MAX или Telegram. Способ выдачи выбираем вместе с вами.</p></article>
+      </div>
+      <section class="sales-economics" aria-labelledby="calculation-title" data-price="1000" data-days="26" data-share="0.7">
+        <div class="calculation-copy"><p class="eyebrow">Пример расчёта</p><h3 id="calculation-title">Если продавать <span data-order-count>10</span> роликов в день</h3><p class="calculation-result"><output data-venue-revenue aria-label="Доля площадки в расчётном примере" aria-live="polite" aria-atomic="true">182 000</output><span>₽ в месяц</span></p><p class="calculation-result-label">Площадке до её расходов</p><p class="calculation-total">Общая выручка от видео: <strong data-total-revenue>260 000 ₽</strong></p>
+          <dl class="calculation-assumptions" id="calculation-assumptions"><div><dt>Цена ролика в примере</dt><dd>1 000 ₽</dd></div><div><dt>Рабочих дней в месяц</dt><dd>26</dd></div><div><dt>Доля площадки в примере</dt><dd>70%</dd></div></dl>
+        </div>
+        <div class="calculation-chart"><p class="calculation-chart-title">Сколько роликов в день покупают гости?</p><div class="scenario-bars" role="group" aria-label="Три расчётных сценария" aria-describedby="calculation-assumptions calculation-note">
+          <button type="button" class="scenario" data-orders="5" aria-pressed="false" disabled><span class="scenario-value">91 000 ₽</span><span class="scenario-track"><span class="scenario-column" style="--level:25%"></span></span><span class="scenario-label">5 роликов</span></button>
+          <button type="button" class="scenario is-selected" data-orders="10" aria-pressed="true" disabled><span class="scenario-value">182 000 ₽</span><span class="scenario-track"><span class="scenario-column" style="--level:50%"></span></span><span class="scenario-label">10 роликов</span></button>
+          <button type="button" class="scenario" data-orders="20" aria-pressed="false" disabled><span class="scenario-value">364 000 ₽</span><span class="scenario-track"><span class="scenario-column" style="--level:100%"></span></span><span class="scenario-label">20 роликов</span></button>
+        </div><p class="calculation-note" id="calculation-note">Считаем оплаченные ролики, а не всех гостей. Все цифры в этом блоке — пример, не результат клиента и не прогноз. Для вашей площадки нужны свои цены, расходы и условия.</p></div>
+        <p class="calculation-business">Подставим ваши цены и затраты, чтобы понять, сколько остаётся площадке и имеет ли смысл запускать услугу.</p><a class="text-link" href="tel:+79522176744">Обсудить расчёт по телефону</a>
+      </section>
+    </div></section>
     <section class="process-section" id="process" aria-labelledby="process-title"><div class="section wrap">
-      <div class="section-heading heading-split"><div><p class="eyebrow">Работа по шагам</p><h2 id="process-title">Что делаете вы,<br>что делаем мы.</h2></div><p>Сотрудникам площадки нужны понятные действия. Монтаж и выдачу готового видео берём на себя.</p></div>
+      <div class="section-heading heading-split"><div><h2 id="process-title">Вы снимаете заезд.<br>Мы делаем готовый ролик.</h2></div><p>На площадке продают видео и организуют съёмку. Мы занимаемся монтажом, проверкой и отправкой готовых роликов.</p></div>
       <ol class="process-list" role="list">
-        <li><span class="step-number">01</span><div><h3>Предлагаете гостю видео</h3><p>Гость выбирает и оплачивает ролик вместе с заездом или отдельно — по схеме вашей площадки.</p></div><span class="step-owner">Ваша команда</span></li>
-        <li><span class="step-number">02</span><div><h3>Передаёте запись</h3><p>Организуете съёмку и передаёте файлы по согласованной схеме. Поможем настроить процесс, если съёмки пока нет.</p></div><span class="step-owner">Ваша команда + мы</span></li>
-        <li><span class="step-number">03</span><div><h3>Монтируем ролик</h3><p>Отбираем удачные моменты, выбираем ракурсы, собираем видео и проверяем его перед отправкой.</p></div><span class="step-owner">Наша команда</span></li>
-        <li><span class="step-number">04</span><div><h3>Отправляем видео гостю</h3><p>Гость получает ролик или ссылку в WhatsApp, MAX или Telegram. Сроки и способ выдачи согласуем перед запуском.</p></div><span class="step-owner">Наша команда</span></li>
+        <li><span class="step-number">01</span><div><h3>Предлагаете видео</h3><p>Гость покупает ролик вместе с заездом или отдельно — как удобнее вашей площадке.</p></div><span class="step-owner">Ваша команда</span></li>
+        <li><span class="step-number">02</span><div><h3>Снимаете и передаёте запись</h3><p>Сотрудники организуют съёмку и передают файлы. Поможем разобраться с процессом до запуска.</p></div><span class="step-owner">Ваша команда</span></li>
+        <li><span class="step-number">03</span><div><h3>Монтируем и проверяем</h3><p>Отбираем моменты, выбираем ракурсы и собираем ролик с гостем и его заездом.</p></div><span class="step-owner">Мы</span></li>
+        <li><span class="step-number">04</span><div><h3>Отправляем гостю</h3><p>Передаём готовое видео в выбранном мессенджере. Срок выдачи согласуем заранее.</p></div><span class="step-owner">Мы</span></li>
       </ol>
-      <aside class="team-note"><div><p class="eyebrow">Мотивация сотрудников</p><h3>Команду можно поощрять за проданные ролики.</h3><p>Если вам подходит такая схема, обсудим вознаграждение сотрудникам за оплаченные ролики. Условия и учёт согласуем с вами.</p></div></aside>
+      <aside class="team-note"><div><p class="eyebrow">Для сотрудников на площадке</p><h3>Больше проданных роликов — повод поощрить команду.</h3><p>Если хотите мотивировать сотрудников предлагать видео, обсудим вознаграждение за оплаченные ролики. Размер и учёт выбираете вы.</p></div></aside>
     </div></section>
 
+    <section class="section wrap start-section" id="start" aria-labelledby="start-title">
+      <div class="section-heading"><h2 id="start-title">Уже снимаете<br>или пока нет камер?</h2></div>
+      <div class="start-grid">
+        <article><span class="index">Есть камеры и записи</span><h3>Начнём с вашего видео.</h3><p>Посмотрим исходник и предложим, какой ролик из него можно сделать. Договоримся о цене и сроках, затем проверим всё на одном заезде.</p><ul><li>Формат готового ролика</li><li>Передача записей и срок выдачи</li><li>Стоимость монтажа и условия теста</li></ul><a class="text-link" href="https://t.me/GOODTOBEDONE">Показать запись в Telegram</a></article>
+        <article><span class="index">Съёмки ещё нет</span><h3>Разберём запуск с нуля.</h3><p>Поможем подобрать камеры и крепления под вашу активность. До покупки оборудования обсудим затраты, работу сотрудников и передачу видео на монтаж.</p><ul><li>Камеры и способ съёмки</li><li>Задачи сотрудников на площадке</li><li>Расходы и первый тестовый заезд</li></ul><a class="text-link" href="tel:+79522176744">Обсудить камеры и запуск</a></article>
+      </div>
+    </section>
+
     <section class="section wrap followup" id="after-ride" aria-labelledby="after-ride-title">
-      <div class="section-heading followup-heading"><p class="eyebrow">Отзывы и повторные заезды</p><h2 id="after-ride-title">Не теряйте связь с гостем<br><em>после заезда.</em></h2><p class="followup-intro">Вместе с роликом можно предложить оставить отзыв. Позже, с отдельного согласия гостя, — пригласить его ещё раз.</p></div>
+      <div class="section-heading followup-heading"><h2 id="after-ride-title">Ролик — повод<br><em>пригласить гостя снова.</em></h2><p class="followup-intro">Спросите, как прошёл заезд, и дайте ссылку на отзыв. А если гость отдельно согласился получать предложения — пригласите его ещё раз.</p></div>
       <div class="followup-grid">
         <div class="followup-copy"><ol class="followup-steps" role="list">
-          <li><span class="followup-number" aria-hidden="true">01</span><div><h3>Выдать ролик</h3><p>Гость получает своё видео в привычном мессенджере. Его удобно сохранить и показать друзьям.</p></div></li>
-          <li><span class="followup-number" aria-hidden="true">02</span><div><h3>Попросить честный отзыв</h3><p>Предложим ссылку на публичный отзыв и возможность написать вам напрямую. Любой опыт важен — не только положительный.</p></div></li>
-          <li><span class="followup-number" aria-hidden="true">03</span><div><h3>Пригласить снова — с&nbsp;согласия</h3><p>Напоминания о новых заездах — только для тех, кто отдельно согласился их получать. Способ подписки и отказа обсудим до запуска.</p></div></li>
-        </ol><div class="followup-benefit"><h3>Отзывы помогают новым гостям выбрать вас.</h3><p>Рассылки и кампании обсудим как отдельную опцию: кому можно писать, с каким предложением и как часто. Они не подключены автоматически.</p></div><a class="button followup-cta" href="tel:+79522176744">Обсудить работу с гостями</a></div>
+          <li><span class="followup-number" aria-hidden="true">01</span><div><h3>Сначала — его видео</h3><p>Гость получает ролик в мессенджере. Можно сразу посмотреть, сохранить и отправить друзьям.</p></div></li>
+          <li><span class="followup-number" aria-hidden="true">02</span><div><h3>Потом — просьба о честном отзыве</h3><p>Дайте ссылку на публичный отзыв и возможность написать вам лично. Гость сам выбирает, как рассказать о хорошем или неудачном опыте.</p></div></li>
+          <li><span class="followup-number" aria-hidden="true">03</span><div><h3>Позже — приглашение на новый заезд</h3><p>Только для тех, кто отдельно согласился получать такие сообщения. Как оформлять согласие и отказ от рассылки, договоримся до запуска.</p></div></li>
+        </ol><div class="followup-benefit"><h3>Отзывы читают те, кто ещё не был у вас.</h3><p>Помогите им понять, чего ждать от заезда. Если нужны рассылки или рекламные кампании, обсудим их отдельно — с подходящим предложением и разрешёнными контактами.</p></div><a class="button followup-cta" href="tel:+79522176744">Обсудить работу с гостями</a></div>
         <figure class="whatsapp-example" aria-labelledby="whatsapp-caption"><a href="assets/whatsapp-example.webp?v=20261126-sales1" target="_blank" rel="noopener" aria-label="Открыть крупный пример переписки в WhatsApp"><img src="assets/whatsapp-example.webp?v=20261126-sales1" width="720" height="1280" loading="lazy" decoding="async" alt="Пример WhatsApp: площадка отправляет ролик, предлагает честный отзыв, позднее приглашает на новый заезд."></a><figcaption id="whatsapp-caption">Пример переписки в WhatsApp · ImageGen.<br>Позднее приглашение — только с отдельного согласия гостя.</figcaption><a class="text-link" href="assets/whatsapp-example.webp?v=20261126-sales1" target="_blank" rel="noopener">Открыть пример крупнее</a></figure>
       </div>
     </section>
 
-    <section class="section wrap faq" aria-labelledby="faq-title">
-      <div><p class="eyebrow">Перед запуском</p><h2 id="faq-title">Что нужно знать<br>владельцу площадки.</h2></div>
+    <section class="section wrap faq" id="faq" aria-labelledby="faq-title">
+      <div><h2 id="faq-title">О цене, камерах<br>и работе с гостями.</h2></div>
       <div class="faq-list">
-        <details><summary>Сколько стоит запуск?</summary><p>Зависит от того, есть ли у вас камеры, как устроена съёмка и сколько роликов нужно монтировать. Отдельно обсудим оборудование, монтаж, выдачу видео и долю площадки. Стоимость и условия теста согласуем до начала работы.</p></details>
-        <details><summary>Что означает «до 70%»?</summary><p>Это возможная доля площадки в выручке от продажи видео на согласованных условиях. Она не равна чистой прибыли: нужно учесть ваши расходы на съёмку, оборудование и организацию работы. Конкретную долю фиксируем до старта.</p></details>
-        <details id="economics-details"><summary>Когда окупится оборудование?</summary><p>Сначала считаем выручку от оплаченных роликов, затем долю площадки и её расходы. Гости и видеозаказы — разные показатели: не каждый посетитель покупает видео.</p><p class="formula">Срок окупаемости в месяцах = вложения на старте ÷ (выручка от видео за месяц × доля площадки − ежемесячные расходы площадки).</p><p>Расчёт имеет смысл, только если после ежемесячных расходов остаётся положительная сумма. Срок без ваших данных не обещаем.</p></details>
-        <details><summary>Что потребуется от сотрудников?</summary><p>Предлагать гостям видео, организовать съёмку и передавать записи по согласованной схеме. Монтаж и отправку готовых роликов берём на себя. До запуска разберём процесс на тестовом заезде.</p></details>
-        <details><summary>Можно работать с большим потоком?</summary><p>Обсудим обычные и пиковые объёмы вашей площадки. На тесте проверим передачу записей, качество ролика и сроки выдачи, которые сможем соблюдать.</p></details>
-        <details><summary>Вы делаете и 360°, и обычные ролики?</summary><p>Да. Монтируем сферические видео 360° и ролики с уже выбранными ракурсами. Для интерактивного просмотра с поворотом камеры нужны настоящий панорамный исходник и подходящий плеер. В примерах на этой странице показаны обычные готовые MP4.</p></details>
+        <details><summary>Сколько будет стоить запуск?</summary><p>Если камеры уже есть, начнём с ваших записей. Если нет — добавим в расчёт оборудование и организацию съёмки. Цена зависит и от объёма монтажа. До старта договоримся о затратах, доле площадки и стоимости теста.</p></details>
+        <details><summary>Площадка может получать 70%?</summary><p>Да, такая доля от продажи роликов возможна при согласованных условиях. Но это выручка, а не чистая прибыль: из неё нужно вычесть ваши расходы на оборудование, съёмку и работу сотрудников. Точную долю фиксируем до запуска.</p></details>
+        <details id="economics-details"><summary>Когда окупится оборудование?</summary><p>Зависит от вложений, цены ролика и числа покупок. Поток гостей сам по себе этого не показывает: видео купят не все. Сначала посчитаем, сколько остаётся у площадки после расходов.</p><p class="formula">Срок окупаемости в месяцах = вложения на старте ÷ (выручка от видео за месяц × доля площадки − ежемесячные расходы площадки).</p><p>После ежемесячных расходов должна оставаться положительная сумма. Тогда можно посчитать, за сколько месяцев вернутся вложения.</p></details>
+        <details><summary>Что будут делать наши сотрудники?</summary><p>Предлагать видео гостям, организовывать съёмку и передавать записи. Мы монтируем и отправляем готовые ролики. На тестовом заезде разберём весь путь, чтобы сотрудники понимали свои задачи.</p></details>
+        <details><summary>А если заездов много?</summary><p>Расскажите, сколько заездов у вас в обычный день и в пик сезона. Согласуем объём монтажа и срок выдачи. На тесте проверим, как передаются записи и как быстро гость получает ролик.</p></details>
+        <details><summary>Нужна камера 360° или подойдёт обычная?</summary><p>Работаем с обоими форматами. Из обычной записи делаем обычный ролик; из видео 360° можно выбрать ракурсы или сохранить сферический формат. Для интерактивного просмотра нужны панорамный исходник и специальный плеер. Здесь в примерах — обычные MP4.</p></details>
       </div>
     </section>
 
-    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="wrap contact-layout"><div><p class="eyebrow">Обсудим вашу площадку</p><h2 id="contact-title">Начнём с расчёта<br>и тестового заезда.</h2><p>Расскажите Александру, какая у вас активность, сколько гостей и есть ли съёмка. Разберём, как предлагать видео, что потребуется для запуска и на каких условиях можно начать.</p></div><div class="contact-card"><p class="contact-name">Александр · Монтаж 360°</p><a class="contact-phone" href="tel:+79522176744">+7 952 217-67-44</a><a class="button" href="tel:+79522176744">Позвонить Александру</a><div class="messenger-links"><a href="https://t.me/GOODTOBEDONE">Написать в Telegram</a><a data-contact="max" hidden>MAX</a></div><p class="contact-caption">Обсудим задачу напрямую.<br>Условия запуска согласуем заранее.</p></div></div></section>
+
+    <section class="section wrap lead-section" id="lead" aria-labelledby="lead-title" hidden>
+      <div class="lead-layout"><div><h2 id="lead-title">Получить расчёт<br>для площадки</h2><p class="lead-intro">Расскажите, что у вас за активность и есть ли съёмка. Александр свяжется с вами, чтобы обсудить монтаж, расходы и первый тест.</p><p class="lead-intro">Один контакт — только для ответа на заявку. Подписку на рассылку здесь не оформляем.</p></div>
+      <form class="lead-form" id="lead-form" novalidate>
+        <div class="lead-field lead-wide"><label for="lead-venue">Название или ссылка на площадку</label><input id="lead-venue" name="venue" required maxlength="180" autocomplete="organization" aria-describedby="lead-error-venue"><span class="field-error" id="lead-error-venue" hidden></span></div>
+        <div class="lead-field"><label for="lead-city">Город</label><input id="lead-city" name="city" required maxlength="100" autocomplete="address-level2" aria-describedby="lead-error-city"><span class="field-error" id="lead-error-city" hidden></span></div>
+        <div class="lead-field"><label for="lead-activity">Тип активности</label><select id="lead-activity" name="activity" required aria-describedby="lead-error-activity"><option value="">Выберите</option><option value="karting">Картинг</option><option value="tubing">Тюбинг</option><option value="quad">Квадротуры</option><option value="rafting">Рафтинг</option><option value="attraction">Аттракционы</option><option value="other">Другое</option></select><span class="field-error" id="lead-error-activity" hidden></span></div>
+        <div class="lead-field"><label for="lead-cameras">Есть ли камеры?</label><select id="lead-cameras" name="cameras" required aria-describedby="lead-error-cameras"><option value="">Выберите</option><option value="yes">Да, уже снимаем</option><option value="no">Пока нет</option><option value="unsure">Нужно обсудить</option></select><span class="field-error" id="lead-error-cameras" hidden></span></div>
+        <div class="lead-field"><label for="lead-flow">Гостей в день <small>необязательно</small></label><input id="lead-flow" name="flow" type="number" min="0" max="100000" step="1" inputmode="numeric" aria-describedby="lead-error-flow"><span class="field-error" id="lead-error-flow" hidden></span></div>
+        <div class="lead-field"><label for="lead-contact-type">Как с вами связаться?</label><select id="lead-contact-type" name="contact_type"><option value="phone">Телефон</option><option value="telegram">Telegram</option><option value="email">Электронная почта</option></select></div>
+        <div class="lead-field"><label for="lead-contact">Ваш контакт</label><input id="lead-contact" name="contact" type="tel" required maxlength="160" autocomplete="tel" aria-describedby="contact-hint lead-error-contact"><small id="contact-hint">Например, +7 900 000-00-00</small><span class="field-error" id="lead-error-contact" hidden></span></div>
+        <div class="lead-field lead-wide"><label for="lead-comment">Что ещё важно знать? <small>необязательно</small></label><textarea id="lead-comment" name="comment" maxlength="1500" rows="3" aria-describedby="lead-error-comment"></textarea><span class="field-error" id="lead-error-comment" hidden></span></div>
+        <div class="lead-wide"><label class="lead-consent"><input name="consent" type="checkbox" required aria-describedby="lead-error-consent"><span>Согласен на обработку данных для ответа на заявку. <a href="" data-privacy-link target="_blank" rel="noopener">Условия обработки данных</a>.</span></label><span class="field-error" id="lead-error-consent" hidden></span></div>
+        <div class="lead-actions lead-wide"><button class="button" type="submit">Получить расчёт для площадки</button><p class="lead-status" id="lead-status" role="status" aria-live="polite"></p><p class="lead-error" id="lead-error" role="alert" hidden></p></div>
+      </form></div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="wrap contact-layout"><div><h2 id="contact-title">Давайте разберём<br>вашу площадку.</h2><p>Позвоните Александру или напишите в Telegram. Расскажите, какие у вас заезды, сколько бывает гостей и есть ли камеры. Обсудим подходящий формат, расходы и условия первого теста.</p></div><div class="contact-card"><p class="contact-name">Александр · Монтаж 360°</p><a class="contact-phone" href="tel:+79522176744">+7 952 217-67-44</a><a class="button" href="tel:+79522176744">Позвонить Александру</a><div class="messenger-links"><a href="https://t.me/GOODTOBEDONE">Написать в Telegram</a><a data-contact="max" hidden>MAX</a></div><p class="contact-caption">Сначала обсудим задачу и посчитаем затраты.<br>Покупать оборудование до разговора не нужно.</p></div></div></section>
   </main>
   <footer class="site-footer wrap"><a class="brand" href="#top" aria-label="Монтаж 360° — в начало"><img src="assets/mark.svg" width="30" height="30" alt=""><span>монтаж<span class="brand-degree">360°</span></span></a><p>Монтаж видео 360° и обычных роликов для аттракционов, прокатов и активного отдыха.</p><a class="text-link" href="#top">Наверх</a></footer>
-  <div class="mobile-contact"><a class="button" href="tel:+79522176744">Обсудить запуск по телефону</a></div>
+  <div class="mobile-contact"><a class="button" href="tel:+79522176744" data-lead-cta>Обсудить запуск по телефону</a></div>
 </body>
 </html>

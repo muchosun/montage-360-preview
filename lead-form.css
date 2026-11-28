@@ -1,0 +1,24 @@
+.venue-site .lead-section { border-top:1px solid var(--line); }
+.venue-site .lead-intro { max-width:58ch;margin-top:20px;font-size:1.0625rem; }
+.venue-site .lead-layout { display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:start; }
+.venue-site .lead-form { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px; }
+.venue-site .lead-field { display:flex;flex-direction:column;gap:8px;min-width:0; }
+.venue-site .lead-field>label,.venue-site .lead-field>span:first-child { font-size:.9375rem;font-weight:600;line-height:1.5; }
+.venue-site .lead-field input,.venue-site .lead-field select,.venue-site .lead-field textarea { width:100%;min-width:0;border:1px solid #9dafbd;border-radius:6px;background:#fff;color:#102b40;padding:12px 14px;font:inherit;min-height:48px; }
+.venue-site .lead-field textarea { min-height:112px;resize:vertical; }
+.venue-site .lead-field input:focus-visible,.venue-site .lead-field select:focus-visible,.venue-site .lead-field textarea:focus-visible { outline:3px solid #174f80;outline-offset:3px; }
+.venue-site .lead-field [aria-invalid=true] { border:2px solid #a63223;padding:11px 13px; }
+.venue-site .lead-field small { color:#506577;font-size:.8125rem;line-height:1.5; }
+.venue-site .lead-wide { grid-column:1/-1; }
+.venue-site .field-error { color:#a63223;font-size:.875rem;line-height:1.5; }
+.venue-site .lead-consent { display:flex;align-items:start;gap:12px;min-height:48px;cursor:pointer;font-size:.875rem;line-height:1.6; }
+.venue-site .lead-consent input { width:22px;height:22px;flex-shrink:0;margin:3px 0;accent-color:#174f80; }
+.venue-site .lead-consent a { text-decoration:underline;text-underline-offset:3px; }
+.venue-site .lead-actions .button { width:100%; }
+.venue-site .lead-actions .button:disabled { cursor:default;opacity:.75; }
+.venue-site .lead-status { margin-top:16px;color:#102b40;font-size:.9375rem; }
+.venue-site .lead-error { margin-top:16px;padding:16px;border-left:3px solid #a63223;background:#fff0ec;color:#792b22;font-size:.9375rem; }
+@media(max-width:800px) { .venue-site .lead-layout { grid-template-columns:minmax(0,1fr);gap:32px; } }
+@media(max-width:540px) { .venue-site .lead-form { grid-template-columns:minmax(0,1fr);gap:18px; }.venue-site .lead-intro{font-size:1rem;} }
+
+.venue-site .lead-consent a { display:inline-flex;align-items:center;min-height:44px; }

@@ -1,3 +1,11 @@
 output/
 .playwright-cli/
 .DS_Store
+
+__pycache__/
+*.pyc
+.env
+.env.*
+*.tfstate
+*.tfstate.*
+.terraform/
